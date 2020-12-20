@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Baloo";
+  src: url("../fonts/Baloo/Baloo-Regular.ttf");
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("../fonts/Cantarell/Cantarell-Bold.ttf");
+  src: url("../fonts/Cantarell/Cantarell-BoldOblique.ttf");
+  src: url("../fonts/Cantarell/Cantarell-Oblique.ttf");
+  src: url("../fonts/Cantarell/Cantarell-Regular.ttf");
+}
+@font-face {
+  font-family: "Kaushan";
+  src: url("../fonts/Kaushan/KaushanScript-Regular.otf");
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("../fonts/LeagueSpartan/LeagueSpartan-Bold.otf");
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico/Pacifico.ttf");
+}
+@font-face {
+  font-family: "Playfair";
+  src: url("../fonts/Playfair/PlayfairDisplay-Black.otf");
+  src: url("../fonts/Playfair/PlayfairDisplay-BlackItalic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplay-Bold.otf");
+  src: url("../fonts/Playfair/PlayfairDisplay-Bold-Italic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplay-Italic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplay-Regular.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-Black.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-BlackItalic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-Bold.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-Bold-Italic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-Italic.otf");
+  src: url("../fonts/Playfair/PlayfairDisplaySC-Regular.otf");
+}
+@font-face {
+  font-family: "Shlop";
+  src: url("../fonts/Shlop/SHLOP.ttf");
+}
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("../fonts/UbuntuMono/UbuntuMono-Bold.ttf");
+  src: url("../fonts/UbuntuMono/UbuntuMono-BoldItalic.ttf");
+  src: url("../fonts/UbuntuMono/UbuntuMono-Italic.ttf");
+  src: url("../fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+}
+#wheel {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+}
+
+body {
+  background: #fa983a;
+  font-family: "Baloo", sans-serif;
+  font-size: 3em;
+}
+
+/*# sourceMappingURL=style.css.map */

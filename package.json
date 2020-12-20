@@ -1,0 +1,20 @@
+{
+  "name": "one_wheel_to_rule_them_all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./styles/sass/main.scss:./styles/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Truong-Terence/One_wheel_to_rule_them_all.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all/issues"
+  },
+  "homepage": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all#readme"
+}
