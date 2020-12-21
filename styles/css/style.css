@@ -69,21 +69,23 @@
   position: absolute;
   width: auto;
   height: auto;
-  left: 600px;
-  top: 200px;
-  font-size: 0.8em;
+  max-width: 85px;
+  left: 850px;
+  top: 300px;
+  font-size: 0.1em;
   font-family: Baloo;
   color: #01a3a4;
   background: #feca57;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 #button {
+  z-index: 1;
   position: absolute;
   width: 300px;
   height: 100px;
   top: 100px;
-  left: 700px;
+  left: 750px;
 }
 #button:hover {
   opacity: 0.9;
@@ -99,12 +101,33 @@
   transform: rotate(40deg);
 }
 
+.shake {
+  animation: headShake 200ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 4;
+}
+
+@keyframes headShake {
+  20% {
+    transform: translateX(2%);
+  }
+  40% {
+    transform: translateY(2%);
+  }
+  60% {
+    transform: translateX(-2%);
+  }
+  80% {
+    transform: translateY(-2%);
+  }
+}
 .blur {
-  animation: blur 3.5s;
+  animation: blur 4.3s;
 }
 
 @keyframes blur {
   0% {
+    filter: blur(0px);
+  }
+  5% {
     filter: blur(1.5px);
   }
   80% {
@@ -114,6 +137,27 @@
     filter: blur(0px);
   }
 }
+.popping {
+  transform: scale(7) rotate(360deg);
+  transition: transform 330ms ease-in-out;
+}
+
+#star {
+  z-index: 0;
+  position: absolute;
+  height: 500px;
+  left: 650px;
+  top: 30px;
+}
+
+#stars {
+  z-index: 0;
+  position: absolute;
+  height: 500px;
+  left: 200px;
+  top: 50px;
+}
+
 body {
   background: #d63031;
   font-family: "Baloo", sans-serif;

@@ -70,8 +70,8 @@ for (i = 0; i < slices; i++) {
     drawText(deg+sliceDeg/2, themes[i].theme)
     deg += sliceDeg
 }
-//THE GAME
 
+document.getElementById("star").style.display = "none"
 
 // THE SPIN
 startButton.addEventListener("click", () => {
@@ -82,6 +82,9 @@ startButton.addEventListener("click", () => {
     wheel.style.transform = "rotate(" + degs + "deg)"
     wheel.classList.add("blur")
     results.textContent = ""
+    startButton.classList.remove("shake")
+    results.classList.remove("popping")
+
 })
 wheel.addEventListener("transitionend", () => {
     wheel.classList.remove("blur")
@@ -111,7 +114,10 @@ wheel.addEventListener("transitionend", () => {
         if ((sliceDeg * 6 < actualDeg) && (actualDeg <= sliceDeg * 7) ){
             results.textContent = themes[6].result
         }
+        document.getElementById("star").style.display = "inline"
         setTimeout (function () {
             document.getElementById("cheers").play()
         },900)
+        startButton.classList.add("shake")
+        results.classList.add("popping")
 })
