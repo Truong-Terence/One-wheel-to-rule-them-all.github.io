@@ -10,7 +10,7 @@ var themes = [
 
      {"theme":"B.D.",
      "color":"#fad390",
-     "result":"On va liquider cette année 2020 dessinés sur les planches !"},
+     "result":"On va liquider cette année 2020 dessinés sur des planches !"},
 
      {"theme":"Anachronisme",
      "color":"#78e08f",
@@ -28,8 +28,9 @@ var themes = [
      "color":"#079992",
      "result":"On va liquider cette année 2020 dans un groupe hippie, comme c'est affligeant"},
 ];
-
 document.getElementById("noise").preload
+document.getElementById("cheers").preload
+
 //VAR CANVAS
 var slices = themes.length
 var sliceDeg = 360/slices
@@ -111,4 +112,7 @@ wheel.addEventListener("transitionend", () => {
         if ((sliceDeg * 6 < actualDeg) && (actualDeg <= sliceDeg * 7) ){
             results.textContent = themes[6].result
         }
+        setTimeout (function () {
+            document.getElementById("cheers").play()
+        },900)
 })
