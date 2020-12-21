@@ -2,32 +2,34 @@
 var themes = [
     {"theme":"Série",
      "color":"#0a3d62",
-     "result":"On achèvera cette année 2020 habillés comme à la télé !"},
+     "result":"On va liquider cette année 2020 habillés comme à la télé !"},
 
      {"theme":"Dessin animé",
      "color":"#f6b93b",
-     "result":"On achèvera cette année 2020 habillés comme dans un cartoon."},
+     "result":"On va liquider cette année 2020 habillés comme dans un cartoon."},
 
      {"theme":"B.D.",
      "color":"#fad390",
-     "result":"On achèvera cette année 2020 dessinés sur les planches !"},
+     "result":"On va liquider cette année 2020 dessinés sur les planches !"},
 
      {"theme":"Anachronisme",
      "color":"#78e08f",
-     "result":"On achèvera cette année 2020 comme Elon Musk à cheval."},
+     "result":"On va liquider cette année 2020 comme Elon Musk à cheval."},
 
      {"theme":"Pays",
      "color":"#6a89cc",
-     "result":"On achèvera cette année 2020 habillés comme .. comme un pays ?"},
+     "result":"On va liquider cette année 2020 habillés comme .. comme un pays ?"},
 
      {"theme":"Disco",
      "color":"#b71540",
-     "result":"On achèvera cette année 2020 sapés comme si on pouvait aller en discothèque"},
+     "result":"On va liquider cette année 2020 sapés comme si on pouvait aller en discothèque"},
 
      {"theme":"Hippies",
      "color":"#079992",
-     "result":"On achèvera cette année 2020 dans un groupe hippie, comme c'est affligeant"},
+     "result":"On va liquider cette année 2020 dans un groupe hippie, comme c'est affligeant"},
 ];
+
+document.getElementById("noise").preload
 //VAR CANVAS
 var slices = themes.length
 var sliceDeg = 360/slices
@@ -39,7 +41,7 @@ var center = width/2
 var wheel = document.getElementById("canvas")
 var startButton = document.getElementById("button")
 var degs = 0
-var turns = 5000
+var turns = 2000
 var results = document.getElementById("result")
 
 // CANVAS FOR THE WHEEL
@@ -74,7 +76,7 @@ for (i = 0; i < slices; i++) {
 startButton.addEventListener("click", () => {
     startButton.style.pointerEvents = "none"
     degs = Math.floor(turns + Math.random() * turns)
-    wheel.style.transition = "all 3.5s ease-out" // could do "rotation instead of all"
+    wheel.style.transition = "all 3.8s ease-in-out" // could do "rotation instead of all"
     wheel.style.transform = "rotate(" + degs + "deg)"
     wheel.classList.add("blur")
     results.textContent = ""
