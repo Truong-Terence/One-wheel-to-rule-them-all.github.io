@@ -75,14 +75,13 @@ for (i = 0; i < slices; i++) {
 
 // THE SPIN
 startButton.addEventListener("click", () => {
+    document.getElementById("noise").play()
     startButton.style.pointerEvents = "none"
     degs = Math.floor(turns + Math.random() * turns)
     wheel.style.transition = "all 3.8s ease-in-out" // could do "rotation instead of all"
     wheel.style.transform = "rotate(" + degs + "deg)"
     wheel.classList.add("blur")
     results.textContent = ""
-    document.getElementById("noise").play()
-
 })
 wheel.addEventListener("transitionend", () => {
     wheel.classList.remove("blur")

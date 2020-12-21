@@ -1,7 +1,7 @@
 {
   "name": "one_wheel_to_rule_them_all",
   "version": "1.0.0",
-  "description": "",
+  "description": "Links : <br>\r https://github.com/weibenfalk/vanilla-js-wheel-of-fortune <br>\r https://codepen.io/mboudghene/pen/qMKENN?editors=0010 <br>\r https://stackoverrun.com/fr/q/1626947",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,5 +19,6 @@
   "homepage": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all#readme",
   "dependencies": {
     "jquery": "^3.5.1"
-  }
+  },
+  "devDependencies": {}
 }
