@@ -2,38 +2,31 @@
 var themes = [
     {"theme":"Série",
      "color":"#0a3d62",
-     "value":1,
-     "result":"On couronnera cette année 2020 habillés comme dans une série"},
+     "result":"On achèvera cette année 2020 habillés comme à la télé !"},
 
      {"theme":"Dessin animé",
      "color":"#f6b93b",
-     "value":2,
-     "result":"On couronnera cette année 2020 habillés comme dans un cartoon"},
+     "result":"On achèvera cette année 2020 habillés comme dans un cartoon."},
 
      {"theme":"B.D.",
      "color":"#fad390",
-     "value":3,
-     "result":"On couronnera cette année 2020 habillés comme dans les B.D."},
+     "result":"On achèvera cette année 2020 dessinés sur les planches !"},
 
      {"theme":"Anachronisme",
      "color":"#78e08f",
-     "value":4,
-     "result":"On couronnera cette année 2020 habillés comme Elon Musk à cheval"},
+     "result":"On achèvera cette année 2020 comme Elon Musk à cheval."},
 
      {"theme":"Pays",
      "color":"#6a89cc",
-     "value":5,
-     "result":"On couronnera cette année 2020 habillés comme .. comme un pays ?"},
+     "result":"On achèvera cette année 2020 habillés comme .. comme un pays ?"},
 
      {"theme":"Disco",
      "color":"#b71540",
-     "value":6,
-     "result":"On couronnera cette année 2020 habillés comme si on pouvait aller en discothèque"},
+     "result":"On achèvera cette année 2020 sapés comme si on pouvait aller en discothèque"},
 
      {"theme":"Hippies",
      "color":"#079992",
-     "value":7,
-     "result":"On couronnera cette année 2020 dans un groupe hippie, comme c'est affligeant"},
+     "result":"On achèvera cette année 2020 dans un groupe hippie, comme c'est affligeant"},
 ];
 //VAR CANVAS
 var slices = themes.length
@@ -81,9 +74,36 @@ startButton.addEventListener("click", () => {
     startButton.style.pointerEvents = "none"
     degs = Math.floor(turns + Math.random() * turns)
     wheel.style.transition = "all 3s ease-out" // could do "rotation instead of all"
-    wheel.style.transform = "rotate(${degs}deg)"
-
+    wheel.style.transform = "rotate(" + degs + "deg)"
+    wheel.classList.add("blur")
 })
 wheel.addEventListener("transitionend", () => {
-    
+    wheel.classList.remove("blur")
+    startButton.style.pointerEvents = "auto"
+    wheel.style.transition = "none"
+    const actualDeg = degs % 360
+    wheel.style.transform = "rotate(" + actualDeg + "deg)"
+    //THE RESULT
+    var results = document.getElementById("result")
+        if ((sliceDeg * 0 <= actualDeg) && (actualDeg < sliceDeg * 1) ){
+            results.textContent = themes[5].result
+        }
+        if ((sliceDeg * 1 < actualDeg) && (actualDeg < sliceDeg * 2) ){
+            results.textContent = themes[4].result
+        }
+        if ((sliceDeg * 2 < actualDeg) && (actualDeg < sliceDeg * 3) ){
+            results.textContent = themes[3].result
+        }
+        if ((sliceDeg * 3 < actualDeg) && (actualDeg < sliceDeg * 4) ){
+            results.textContent = themes[2].result
+        }
+        if ((sliceDeg * 4 < actualDeg) && (actualDeg < sliceDeg * 5) ){
+            results.textContent = themes[1].result
+        }
+        if ((sliceDeg * 5 < actualDeg) && (actualDeg < sliceDeg * 6) ){
+            results.textContent = themes[0].result
+        }
+        if ((sliceDeg * 6 < actualDeg) && (actualDeg <= sliceDeg * 7) ){
+            results.textContent = themes[6].result
+        }
 })

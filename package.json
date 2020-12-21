@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all/issues"
   },
-  "homepage": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all#readme"
+  "homepage": "https://github.com/Truong-Terence/One_wheel_to_rule_them_all#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }
