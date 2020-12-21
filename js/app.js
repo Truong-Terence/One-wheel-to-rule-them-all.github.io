@@ -74,10 +74,12 @@ for (i = 0; i < slices; i++) {
 startButton.addEventListener("click", () => {
     startButton.style.pointerEvents = "none"
     degs = Math.floor(turns + Math.random() * turns)
-    wheel.style.transition = "all 3s ease-out" // could do "rotation instead of all"
+    wheel.style.transition = "all 3.5s ease-out" // could do "rotation instead of all"
     wheel.style.transform = "rotate(" + degs + "deg)"
     wheel.classList.add("blur")
     results.textContent = ""
+    document.getElementById("noise").play()
+
 })
 wheel.addEventListener("transitionend", () => {
     wheel.classList.remove("blur")
