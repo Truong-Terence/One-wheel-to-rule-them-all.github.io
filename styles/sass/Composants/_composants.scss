@@ -11,3 +11,22 @@
     left:600px;
     top:250px;
 }
+
+#button {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 100px;
+    left: 700px;
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+
+#marker {
+    z-index: 2;
+    position: absolute;
+    top: -10px;
+    left: 250px;
+}

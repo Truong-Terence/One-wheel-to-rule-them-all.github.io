@@ -42,13 +42,13 @@ var deg = 0
 var ctx = canvas.getContext('2d')
 var width = canvas.width
 var center = width/2
-
 //VAR OF THE GAME
-oldpick = []
-
+var wheel = document.getElementById("canvas")
+var startButton = document.getElementById("button")
+var degs = 0
+var turns = 5000
 
 // CANVAS FOR THE WHEEL
-
 function deg2rad(deg) {return deg * Math.PI/180}
 function drawSlice(deg, color) {
     ctx.beginPath()
@@ -68,24 +68,22 @@ function drawText(deg, text) {
     ctx.fillText(text, 130, 10)
     ctx.restore()
 }
-
 for (i = 0; i < slices; i++) {
     drawSlice(deg, themes[i].color)
     drawText(deg+sliceDeg/2, themes[i].theme)
     deg += sliceDeg
 }
-
 //THE GAME
 
 
 // THE SPIN
-document.getElementById("canvas").addEventListener("click", spin)
-function spin(e){
-    document.getElementById("canvas").addEventListener("click", null) // Can start spinning again
-    console.log("OldPick: " + oldpick.length, "Themes length: " + themes.length)
-    if(oldpick.length == data.length){
-        console.log("done")
-        document.getElementById("canvas").addEventListener("click", null)
-        return
-    }
-}
+startButton.addEventListener("click", () => {
+    startButton.style.pointerEvents = "none"
+    degs = Math.floor(turns + Math.random() * turns)
+    wheel.style.transition = "all 3s ease-out" // could do "rotation instead of all"
+    wheel.style.transform = "rotate(${degs}deg)"
+
+})
+wheel.addEventListener("transitionend", () => {
+    
+})
