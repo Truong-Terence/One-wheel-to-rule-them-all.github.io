@@ -35,14 +35,18 @@ var themes = [
      "value":7,
      "result":"On couronnera cette année 2020 dans un groupe hippie, comme c'est affligeant"},
 ];
-
-// CANVAS FOR THE WHEEL
+//VAR CANVAS
 var slices = themes.length
 var sliceDeg = 360/slices
 var deg = 0
 var ctx = canvas.getContext('2d')
 var width = canvas.width
 var center = width/2
+
+//VAR OF THE GAME
+
+
+// CANVAS FOR THE WHEEL
 
 function deg2rad(deg) {return deg * Math.PI/180}
 function drawSlice(deg, color) {
@@ -70,4 +74,7 @@ for (i = 0; i < slices; i++) {
     deg += sliceDeg
 }
 
-// THE GAME
+//THE GAME
+
+
+// THE SPIN
