@@ -40,6 +40,7 @@ var wheel = document.getElementById("canvas")
 var startButton = document.getElementById("button")
 var degs = 0
 var turns = 5000
+var results = document.getElementById("result")
 
 // CANVAS FOR THE WHEEL
 function deg2rad(deg) {return deg * Math.PI/180}
@@ -76,6 +77,7 @@ startButton.addEventListener("click", () => {
     wheel.style.transition = "all 3s ease-out" // could do "rotation instead of all"
     wheel.style.transform = "rotate(" + degs + "deg)"
     wheel.classList.add("blur")
+    results.textContent = ""
 })
 wheel.addEventListener("transitionend", () => {
     wheel.classList.remove("blur")
@@ -84,7 +86,6 @@ wheel.addEventListener("transitionend", () => {
     const actualDeg = degs % 360
     wheel.style.transform = "rotate(" + actualDeg + "deg)"
     //THE RESULT
-    var results = document.getElementById("result")
         if ((sliceDeg * 0 <= actualDeg) && (actualDeg < sliceDeg * 1) ){
             results.textContent = themes[5].result
         }
