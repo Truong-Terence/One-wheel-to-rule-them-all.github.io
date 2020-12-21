@@ -44,6 +44,7 @@ var width = canvas.width
 var center = width/2
 
 //VAR OF THE GAME
+oldpick = []
 
 
 // CANVAS FOR THE WHEEL
@@ -78,3 +79,13 @@ for (i = 0; i < slices; i++) {
 
 
 // THE SPIN
+document.getElementById("canvas").addEventListener("click", spin)
+function spin(e){
+    document.getElementById("canvas").addEventListener("click", null) // Can start spinning again
+    console.log("OldPick: " + oldpick.length, "Themes length: " + themes.length)
+    if(oldpick.length == data.length){
+        console.log("done")
+        document.getElementById("canvas").addEventListener("click", null)
+        return
+    }
+}
