@@ -69,10 +69,10 @@
   position: absolute;
   width: auto;
   height: auto;
-  max-width: 85px;
+  max-width: 120px;
   left: 850px;
   top: 300px;
-  font-size: 0.1em;
+  font-size: 0.13em;
   font-family: Baloo;
   color: #01a3a4;
   background: #feca57;
@@ -88,8 +88,11 @@
   left: 750px;
 }
 #button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 200ms ease-in-out;
+  animation-fill-mode: backwards;
 }
 
 #marker {
@@ -138,7 +141,7 @@
   }
 }
 .popping {
-  transform: scale(7) rotate(360deg);
+  transform: scale(5) rotate(360deg);
   transition: transform 330ms ease-in-out;
 }
 
